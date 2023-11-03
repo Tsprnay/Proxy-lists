@@ -1,0 +1,29 @@
+name: Update proxy files
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt # install the required packages
+          pip install --user git-filter-repo
+      - name: Run script and update files
+        run: |
+          git filter-repo --path sites.json --path main.py --path README.md --path requirements.txt --path .github/ --force
+          python main.py # run your script that collects proxies
+          git config --global user.name 'Tsprnay'
+          git config --global user.email 'abobik3000@icloud.com'
+          git add proxies
+          git commit -m "Update proxy files on `date +'%Y-%m-%d %H:%M:%S'`"
+          git remote add Proxy-lists https://github.com/Tsprnay/Proxy-lists.git
+          git push --set-upstream Proxy-lists master --force
