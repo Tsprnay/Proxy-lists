@@ -19,7 +19,7 @@ jobs:
           pip install --user git-filter-repo
       - name: Run script and update files
         run: |
-          # git filter-repo --path sites.json --path main.py --path README.md --path requirements.txt --path .github/ --force
+          # git filter-repo --path sites.json --path main.py --path README.md --path requirements.txt --path LICENSE --path .github/ --force
           python main.py # run your script that collects proxies
           git config --global user.name 'Tsprnay'
           git config --global user.email 'abobik3000@icloud.com'
