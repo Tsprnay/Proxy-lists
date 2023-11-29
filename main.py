@@ -49,6 +49,12 @@ def randomize_proxies(file_name):
         with open(file_name, 'w') as f:
             f.writelines(lines)
 
+def combine_proxy_files(output_file, *input_files):
+    with open(output_file, 'w') as out_file:
+        for input_file in input_files:
+            with open(input_file) as in_file:
+                out_file.write(in_file.read())
+
 if not os.path.exists('proxies'):
     os.makedirs('proxies')
 
@@ -76,3 +82,9 @@ randomize_proxies('proxies/socks4.txt')
 randomize_proxies('proxies/socks5.txt')
 randomize_proxies('proxies/http.txt')
 randomize_proxies('proxies/https.txt')
+
+combine_proxy_files('proxies/all.txt', 'proxies/socks4.txt', 'proxies/socks5.txt', 'proxies/http.txt', 'proxies/https.txt')
+
+remove_duplicates('proxies/all.txt')
+remove_empty_lines('proxies/all.txt')
+randomize_proxies('proxies/all.txt')
