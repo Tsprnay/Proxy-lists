@@ -162,3 +162,4 @@ with open('proxies/all_no_ports.txt', 'w') as f:
     f.write('\n'.join(ips_without_ports))
 
 validate_ips('proxies/all.txt')
+remove_long_lines('proxies/all.txt', 21)
