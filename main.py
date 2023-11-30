@@ -68,10 +68,9 @@ def validate_ip(ip):
 
 
 def validate_ports(ip_with_port):
-    _, port = ip_with_port.split(':')
+    ip, port = ip_with_port.split(':')
     try:
-        port = int(port)
-        return 0 <= port <= 65535
+        return 0 <= int(port) <= 65535 and len(ip) <= 15  # Check both port validity and IP length
     except ValueError:
         return False
 
