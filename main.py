@@ -49,7 +49,7 @@ def scrape_proxies(type):
 
 def extract_ips_with_ports(file_name):
     with open(file_name) as f:
-        ips_with_ports = re.findall(r'\d+\.\d+\.\d+\.\d+:\d+', f.read())
+        ips_with_ports = re.findall(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}:[0-9]+\b', f.read())
     return ips_with_ports
 
 
