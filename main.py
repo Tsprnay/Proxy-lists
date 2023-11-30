@@ -80,7 +80,7 @@ def validate_ips(file_name):
     valid_ips = []
     for ip in ips_with_ports:
         ip_parts = ip.split(':')
-        if len(ip_parts) == 2 and validate_ip(ip_parts[0]) and validate_ports(ip):
+        if len(ip) <= 21 and len(ip_parts) == 2 and validate_ip(ip_parts[0]) and validate_ports(ip):
             valid_ips.append(ip)
         else:
             print(f"Invalid IP: {ip}")
