@@ -95,7 +95,7 @@ def combine_proxy_files(output_file, *input_files):
     with open(output_file, 'w') as out_file:
         for input_file in input_files:
             with open(input_file) as in_file:
-                out_file.write(in_file.read())
+                out_file.write(in_file.read().strip() + '\n')  # Add a newline after each site
 
 
 if not os.path.exists('proxies'):
