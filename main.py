@@ -88,6 +88,14 @@ def validate_ips(file_name):
     with open(file_name, 'w') as f:
         f.write('\n'.join(valid_ips))
 
+def remove_long_lines(file_name, max_length):
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+
+    with open(file_name, 'w') as f:
+        for line in lines:
+            if len(line.strip()) <= max_length:
+                f.write(line)
 
 def randomize_proxies(file_name):
     with open(file_name) as f:
@@ -128,9 +136,13 @@ remove_duplicates('proxies/http.txt')
 remove_duplicates('proxies/https.txt')
 
 validate_ips('proxies/socks4.txt')
+remove_long_lines('proxies/socks4.txt', 21)
 validate_ips('proxies/socks5.txt')
+remove_long_lines('proxies/socks5.txt', 21)
 validate_ips('proxies/http.txt')
+remove_long_lines('proxies/http.txt', 21)
 validate_ips('proxies/https.txt')
+remove_long_lines('proxies/https.txt', 21)
 
 randomize_proxies('proxies/socks4.txt')
 randomize_proxies('proxies/socks5.txt')
