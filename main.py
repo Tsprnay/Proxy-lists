@@ -135,6 +135,11 @@ remove_duplicates('proxies/socks5.txt')
 remove_duplicates('proxies/http.txt')
 remove_duplicates('proxies/https.txt')
 
+randomize_proxies('proxies/socks4.txt')
+randomize_proxies('proxies/socks5.txt')
+randomize_proxies('proxies/http.txt')
+randomize_proxies('proxies/https.txt')
+
 validate_ips('proxies/socks4.txt')
 remove_long_lines('proxies/socks4.txt', 21)
 validate_ips('proxies/socks5.txt')
@@ -143,11 +148,6 @@ validate_ips('proxies/http.txt')
 remove_long_lines('proxies/http.txt', 21)
 validate_ips('proxies/https.txt')
 remove_long_lines('proxies/https.txt', 21)
-
-randomize_proxies('proxies/socks4.txt')
-randomize_proxies('proxies/socks5.txt')
-randomize_proxies('proxies/http.txt')
-randomize_proxies('proxies/https.txt')
 
 combine_proxy_files('proxies/all.txt', 'proxies/socks4.txt', 'proxies/socks5.txt', 'proxies/http.txt',
                     'proxies/https.txt')
