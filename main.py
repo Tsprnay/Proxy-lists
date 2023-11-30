@@ -67,9 +67,18 @@ def validate_ip(ip):
         return False
 
 
+def validate_ports(ip_with_port):
+    _, port = ip_with_port.split(':')
+    try:
+        port = int(port)
+        return 0 <= port <= 65535
+    except ValueError:
+        return False
+
+
 def validate_ips(file_name):
     ips_with_ports = extract_ips_with_ports(file_name)
-    valid_ips = [ip for ip in ips_with_ports if validate_ip(ip.split(':')[0])]
+    valid_ips = [ip for ip in ips_with_ports if validate_ip(ip.split(':')[0]) and validate_ports(ip)]
 
     with open(file_name, 'w') as f:
         f.write('\n'.join(valid_ips))
