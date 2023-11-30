@@ -40,8 +40,10 @@ def scrape_proxies(type):
     for site in sites[type]:
         try:
             r = requests.get(site, timeout=5)
+            proxies = r.text.split('\n')
+            valid_proxies = [proxy for proxy in proxies if len(proxy) <= 21]
             with open(f"proxies/{type}.txt", "a") as f:
-                f.write("\n" + r.text)
+                f.write("\n" + '\n'.join(valid_proxies))
         except Exception as e:
             print(f'Error scraping proxies from {site}: {e}')
         time.sleep(1)
