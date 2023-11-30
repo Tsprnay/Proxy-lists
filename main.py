@@ -72,7 +72,7 @@ def validate_ip(ip):
 def validate_ports(ip_with_port):
     ip, port = ip_with_port.split(':')
     try:
-        return 0 <= int(port) <= 65535 and len(ip) <= 15  # Check both port validity and IP length
+        return 0 <= int(port) <= 65535 and len(ip) <= 15
     except ValueError:
         return False
 
@@ -84,8 +84,6 @@ def validate_ips(file_name):
         ip_parts = ip.split(':')
         if len(ip) <= 21 and len(ip_parts) == 2 and validate_ip(ip_parts[0]) and validate_ports(ip):
             valid_ips.append(ip)
-        else:
-            print(f"Invalid IP: {ip}")
 
     with open(file_name, 'w') as f:
         f.write('\n'.join(valid_ips))
@@ -111,7 +109,7 @@ def combine_proxy_files(output_file, *input_files):
     with open(output_file, 'w') as out_file:
         for input_file in input_files:
             with open(input_file) as in_file:
-                out_file.write(in_file.read().strip() + '\n')  # Add a newline after each site
+                out_file.write(in_file.read().strip() + '\n')
 
 
 if not os.path.exists('proxies'):
