@@ -9,7 +9,8 @@
         "https://api.openproxylist.xyz/socks4.txt",
         "https://www.proxy-list.download/api/v1/get?type=socks4",
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt",
-        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt"
+        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt",
+        "https://proxyspace.pro/socks4.txt"
     ],
     "socks5": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
@@ -23,7 +24,8 @@
         "https://www.proxy-list.download/api/v1/get?type=socks5",
         "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt",
-        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt"
+        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt",
+        "https://proxyspace.pro/socks5.txt"
     ],
     "https": [
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
@@ -31,7 +33,8 @@
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=https",
         "https://www.proxy-list.download/api/v1/get?type=https",
         "https://naawy.com/api/public/proxylist/getList/?proxyType=https&format=txt",
-        "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt"
+        "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
+        "https://proxyspace.pro/https.txt"
     ],
     "http": [
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=http",
@@ -47,6 +50,7 @@
         "https://www.proxy-list.download/api/v1/get?type=http",
         "https://naawy.com/api/public/proxylist/getList/?proxyType=http&format=txt",
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
-        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt"
+        "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt",
+        "https://proxyspace.pro/http.txt"
     ]
 }
