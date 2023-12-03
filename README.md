@@ -12,15 +12,15 @@ This proxy list is collected from the list of proxies available on the Internet.
     ```bash
     https://raw.githubusercontent.com/Tsprnay/Proxy-lists/master/proxies/all.txt
     ```
-    - **ALL NO PORTS**
+  - **ALL NO PORTS**
     ```bash
     https://raw.githubusercontent.com/Tsprnay/Proxy-lists/master/proxies/all_no_ports.txt
     ```
-    - **HTTP**
+  - **HTTP**
     ```bash
     https://raw.githubusercontent.com/Tsprnay/Proxy-lists/master/proxies/http.txt
     ```
-    - **HTTPS**
+  - **HTTPS**
     ```bash
     https://raw.githubusercontent.com/Tsprnay/Proxy-lists/master/proxies/https.txt
     ```
