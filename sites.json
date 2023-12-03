@@ -37,7 +37,7 @@
         "https://naawy.com/api/public/proxylist/getList/?proxyType=https&format=txt",
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
         "https://proxyspace.pro/https.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=https&limit=5"
+        "https://pubproxy.com/api/proxy?format=txt&type=https&limit=5&https=true"
     ],
     "http": [
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=http",
