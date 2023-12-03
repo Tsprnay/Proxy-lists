@@ -16,11 +16,11 @@ def clean_proxy_format(file_name):
     cleaned_lines = []
     for line in lines:
         cleaned_line = re.sub(r'^.*://', '', line)
-        cleaned_line = re.sub(r':.*$', '', cleaned_line)
-        cleaned_lines.append(cleaned_line)
+        cleaned_line = re.sub(r':\d+.*$', '', cleaned_line)
+        cleaned_lines.append(cleaned_line.strip())
 
     with open(file_name, 'w') as f:
-        f.writelines(cleaned_lines)
+        f.writelines('\n'.join(cleaned_lines))
 
 def remove_duplicates(file_name):
     lines_seen = set()
