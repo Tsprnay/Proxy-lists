@@ -48,7 +48,8 @@
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/socks5/data.txt",
         "https://internet.limited/socks5.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks5.txt",
-        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks5.txt"
+        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks5.txt",
+        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/socks5.txt"
     ],
     "https": [
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
@@ -92,6 +93,7 @@
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/http/data.txt",
         "https://internet.limited/http.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/http.txt",
-        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt"
+        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt",
+        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/http.txt"
     ]
 }
