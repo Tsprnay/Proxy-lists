@@ -49,6 +49,7 @@ def remove_exists(file_name):
 
 
 def scrape_proxies(type):
+    success = False
     for site in sites[type]:
         try:
             r = requests.get(site, timeout=5)
@@ -56,11 +57,14 @@ def scrape_proxies(type):
             valid_proxies = [proxy for proxy in proxies if len(proxy) <= 21]
             with open(f"proxies/{type}.txt", "a") as f:
                 f.write("\n" + '\n'.join(valid_proxies))
+            success = True
         except requests.exceptions.RequestException as e:
             print(f'Error scraping proxies from {site}: {e}')
             print('Skipping this site and moving to the next one...')
         time.sleep(0.1)
-
+    if not success:
+        print('Failed to scrape proxies from all sites.')
+        sys.exit(1)
 
 def extract_ips_with_ports(file_name):
     with open(file_name) as f:
