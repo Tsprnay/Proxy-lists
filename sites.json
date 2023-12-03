@@ -22,7 +22,8 @@
         "https://internet.limited/socks4.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks4.txt",
         "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks4.txt",
-        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks4.txt"
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks4.txt",
+        "https://pubproxy.com/api/proxy?format=txt&type=socks4&limit=5"
     ],
     "socks5": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
@@ -49,7 +50,8 @@
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks5.txt",
         "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks5.txt",
         "https://raw.githubusercontent.com/im-razvan/proxy_list/main/socks5.txt",
-        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks5.txt"
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks5.txt",
+        "https://pubproxy.com/api/proxy?format=txt&type=socks5&limit=5"
     ],
     "https": [
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
@@ -63,7 +65,8 @@
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/https",
         "https://internet.limited/https.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/https.txt",
-        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/https.txt"
+        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/https.txt",
+        "https://pubproxy.com/api/proxy?format=txt&type=https&limit=5&https=true"
     ],
     "http": [
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=http",
@@ -93,6 +96,7 @@
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/http.txt",
         "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt",
         "https://raw.githubusercontent.com/im-razvan/proxy_list/main/http.txt",
-        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/http.txt"
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/http.txt",
+        "https://pubproxy.com/api/proxy?format=txt&type=http&limit=5"
     ]
 }
