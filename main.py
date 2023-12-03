@@ -9,6 +9,18 @@ import ipaddress
 with open('sites.json') as f:
     sites = json.load(f)
 
+def clean_proxy_format(file_name):
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+
+    cleaned_lines = []
+    for line in lines:
+        cleaned_line = re.sub(r'^.*://', '', line)
+        cleaned_line = re.sub(r':.*$', '', cleaned_line)
+        cleaned_lines.append(cleaned_line)
+
+    with open(file_name, 'w') as f:
+        f.writelines(cleaned_lines)
 
 def remove_duplicates(file_name):
     lines_seen = set()
@@ -129,6 +141,11 @@ remove_empty_lines('proxies/socks4.txt')
 remove_empty_lines('proxies/socks5.txt')
 remove_empty_lines('proxies/http.txt')
 remove_empty_lines('proxies/https.txt')
+
+clean_proxy_format('proxies/socks4.txt')
+clean_proxy_format('proxies/socks5.txt')
+clean_proxy_format('proxies/http.txt')
+clean_proxy_format('proxies/https.txt')
 
 remove_duplicates('proxies/socks4.txt')
 remove_duplicates('proxies/socks5.txt')
