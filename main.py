@@ -62,7 +62,7 @@ def scrape_proxies(type):
         except requests.exceptions.RequestException as e:
             print(f'Error scraping proxies from {site}: {e}')
             print('Skipping this site and moving to the next one...')
-        time.sleep(0.1)
+        time.sleep(0.5)
     if not success:
         print('Failed to scrape proxies from all sites.')
         sys.exit(1)
