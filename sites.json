@@ -20,7 +20,8 @@
         "https://raw.githubusercontent.com/prxchk/proxy-list/main/socks4.txt",
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/socks4",
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/socks4/data.txt",
-        "https://internet.limited/socks4.txt"
+        "https://internet.limited/socks4.txt",
+        "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks4.txt"
     ],
     "socks5": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
@@ -44,7 +45,8 @@
         "https://raw.githubusercontent.com/prxchk/proxy-list/main/socks5.txt",
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/socks5",
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/socks5/data.txt",
-        "https://internet.limited/socks5.txt"
+        "https://internet.limited/socks5.txt",
+        "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks5.txt"
     ],
     "https": [
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
@@ -57,7 +59,8 @@
         "https://pubproxy.com/api/proxy?format=txt&type=https&limit=5&https=true",
         "https://raw.githubusercontent.com/zloi-user/hideip.me/main/https.txt",
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/https",
-        "https://internet.limited/https.txt"
+        "https://internet.limited/https.txt",
+        "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/https.txt"
     ],
     "http": [
         "https://api.proxyscrape.com/?request=displayproxies&proxytype=http",
@@ -84,6 +87,7 @@
         "https://raw.githubusercontent.com/prxchk/proxy-list/main/http.txt",
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/http",
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/http/data.txt",
-        "https://internet.limited/http.txt"
+        "https://internet.limited/http.txt",
+        "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/http.txt"
     ]
 }
