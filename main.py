@@ -59,7 +59,7 @@ def scrape_proxies(type):
         except requests.exceptions.RequestException as e:
             print(f'Error scraping proxies from {site}: {e}')
             print('Skipping this site and moving to the next one...')
-        time.sleep(1)
+        time.sleep(0.1)
 
 
 def extract_ips_with_ports(file_name):
