@@ -11,7 +11,6 @@
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt",
         "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt",
         "https://proxyspace.pro/socks4.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=socks4&limit=5",
         "http://proxy11.com/api/proxy.txt?key=NjAzNw.ZWvSpg.2z9u5ITRJp2K_iTh4puY0LE-oQg",
         "https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/generated/socks4_proxies.txt",
         "https://raw.githubusercontent.com/zloi-user/hideip.me/main/socks4.txt",
@@ -22,7 +21,8 @@
         "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/protocols/socks4/data.txt",
         "https://internet.limited/socks4.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks4.txt",
-        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks4.txt"
+        "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks4.txt",
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks4.txt"
     ],
     "socks5": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
@@ -38,7 +38,6 @@
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt",
         "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt",
         "https://proxyspace.pro/socks5.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=socks5&limit=5",
         "https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/generated/socks5_proxies.txt",
         "https://raw.githubusercontent.com/zloi-user/hideip.me/main/socks5.txt",
         "https://raw.githubusercontent.com/zevtyardt/proxy-list/main/socks5.txt",
@@ -49,7 +48,8 @@
         "https://internet.limited/socks5.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks5.txt",
         "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/socks5.txt",
-        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/socks5.txt"
+        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/socks5.txt",
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/socks5.txt"
     ],
     "https": [
         "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
@@ -59,7 +59,6 @@
         "https://naawy.com/api/public/proxylist/getList/?proxyType=https&format=txt",
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/https.txt",
         "https://proxyspace.pro/https.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=https&limit=5&https=true",
         "https://raw.githubusercontent.com/zloi-user/hideip.me/main/https.txt",
         "https://raw.githubusercontent.com/casals-ar/proxy-list/main/https",
         "https://internet.limited/https.txt",
@@ -82,7 +81,6 @@
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
         "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt",
         "https://proxyspace.pro/http.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=http&limit=5",
         "https://raw.githubusercontent.com/proxy4parsing/proxy-list/main/http.txt",
         "https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/generated/http_proxies.txt",
         "https://raw.githubusercontent.com/zloi-user/hideip.me/main/http.txt",
@@ -94,6 +92,7 @@
         "https://internet.limited/http.txt",
         "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/http.txt",
         "https://raw.githubusercontent.com/Zaeem20/FREE_PROXIES_LIST/master/http.txt",
-        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/http.txt"
+        "https://raw.githubusercontent.com/im-razvan/proxy_list/main/http.txt",
+        "https://raw.githubusercontent.com/TuanMinPay/live-proxy/master/http.txt"
     ]
 }
