@@ -11,7 +11,8 @@
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks4.txt",
         "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt",
         "https://proxyspace.pro/socks4.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=socks4&limit=5"
+        "https://pubproxy.com/api/proxy?format=txt&type=socks4&limit=5",
+        "http://proxy11.com/api/proxy.txt?key=NjAzNw.ZWvSpg.2z9u5ITRJp2K_iTh4puY0LE-oQg"
     ],
     "socks5": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
