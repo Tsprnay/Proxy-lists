@@ -56,6 +56,7 @@
         "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
         "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/http.txt",
         "https://proxyspace.pro/http.txt",
-        "https://pubproxy.com/api/proxy?format=txt&type=http&limit=5"
+        "https://pubproxy.com/api/proxy?format=txt&type=http&limit=5",
+        "https://raw.githubusercontent.com/proxy4parsing/proxy-list/main/http.txt"
     ]
 }
