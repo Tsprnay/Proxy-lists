@@ -184,5 +184,6 @@ ips_without_ports = extract_ips_without_ports('proxies/all.txt')
 with open('proxies/all_no_ports.txt', 'w') as f:
     f.write('\n'.join(ips_without_ports))
 
+remove_duplicates('proxies/all_no_ports.txt')
 validate_ips('proxies/all.txt')
 remove_long_lines('proxies/all.txt', 21)
