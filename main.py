@@ -115,13 +115,12 @@ def remove_long_lines(file_name, max_length):
             if len(line.strip()) <= max_length:
                 f.write(line)
 
-def randomize_proxies(file_name):
+def sort_proxies(file_name):
     with open(file_name) as f:
         lines = f.readlines()
-        random.shuffle(lines)
+        lines.sort(key=lambda x: (len(x), x))
         with open(file_name, 'w') as f:
             f.writelines(lines)
-
 
 def combine_proxy_files(output_file, *input_files):
     with open(output_file, 'w') as out_file:
@@ -158,10 +157,10 @@ remove_duplicates('proxies/socks5.txt')
 remove_duplicates('proxies/http.txt')
 remove_duplicates('proxies/https.txt')
 
-randomize_proxies('proxies/socks4.txt')
-randomize_proxies('proxies/socks5.txt')
-randomize_proxies('proxies/http.txt')
-randomize_proxies('proxies/https.txt')
+sort_proxies('proxies/socks4.txt')
+sort_proxies('proxies/socks5.txt')
+sort_proxies('proxies/http.txt')
+sort_proxies('proxies/https.txt')
 
 validate_ips('proxies/socks4.txt')
 remove_long_lines('proxies/socks4.txt', 21)
@@ -177,7 +176,7 @@ combine_proxy_files('proxies/all.txt', 'proxies/socks4.txt', 'proxies/socks5.txt
 
 remove_duplicates('proxies/all.txt')
 remove_empty_lines('proxies/all.txt')
-randomize_proxies('proxies/all.txt')
+sort_proxies('proxies/all.txt')
 
 ips_without_ports = extract_ips_without_ports('proxies/all.txt')
 
