@@ -128,9 +128,23 @@ def combine_proxy_files(output_file, *input_files):
             with open(input_file) as in_file:
                 out_file.write(in_file.read().strip() + '\n')
 
+def duplicate_and_sort_proxies(file_name):
+    sorted_folder_path = 'proxies/sorted'
+    sorted_file_path = os.path.join(sorted_folder_path, os.path.basename(file_name))
+
+    shutil.copyfile(file_name, sorted_file_path)
+
+    with open(sorted_file_path, 'r') as f:
+        proxies = sorted(f.readlines())
+
+    with open(sorted_file_path, 'w') as f:
+        f.writelines(proxies)
+
 
 if not os.path.exists('proxies'):
     os.makedirs('proxies')
+if not os.path.exists('proxies/sorted'):
+    os.makedirs('proxies/sorted')
 
 remove_exists('proxies/socks4')
 remove_exists('proxies/socks5')
@@ -186,3 +200,9 @@ with open('proxies/all_no_ports.txt', 'w') as f:
 remove_duplicates('proxies/all_no_ports.txt')
 validate_ips('proxies/all.txt')
 remove_long_lines('proxies/all.txt', 21)
+
+duplicate_and_sort_proxies('proxies/socks4.txt')
+duplicate_and_sort_proxies('proxies/socks5.txt')
+duplicate_and_sort_proxies('proxies/http.txt')
+duplicate_and_sort_proxies('proxies/https.txt')
+duplicate_and_sort_proxies('proxies/all.txt')
