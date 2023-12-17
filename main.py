@@ -5,6 +5,7 @@ import time
 import random
 import re
 import ipaddress
+import shutil
 
 with open('sites.json') as f:
     sites = json.load(f)
