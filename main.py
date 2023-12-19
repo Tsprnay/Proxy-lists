@@ -141,6 +141,15 @@ def duplicate_and_sort_proxies(file_name):
     with open(sorted_file_path, 'w') as f:
         f.writelines(proxies)
 
+def remove_unwanted_proxies(file_name):
+    unwanted_ips = {'0.0.0.0', '127.0.0.1', '1.1.1.1', '8.8.8.8', '8.8.4.4'}
+    with open(file_name, 'r') as f:
+        proxies = f.readlines()
+
+    proxies = [proxy for proxy in proxies if proxy.split(':')[0] not in unwanted_ips]
+
+    with open(file_name, 'w') as f:
+        f.writelines(proxies)
 
 if not os.path.exists('proxies'):
     os.makedirs('proxies')
@@ -171,6 +180,12 @@ remove_duplicates('proxies/socks4.txt')
 remove_duplicates('proxies/socks5.txt')
 remove_duplicates('proxies/http.txt')
 remove_duplicates('proxies/https.txt')
+
+remove_unwanted_proxies('proxies/socks4.txt')
+remove_unwanted_proxies('proxies/socks5.txt')
+remove_unwanted_proxies('proxies/http.txt')
+remove_unwanted_proxies('proxies/https.txt')
+remove_unwanted_proxies('proxies/all.txt')
 
 randomize_proxies('proxies/socks4.txt')
 randomize_proxies('proxies/socks5.txt')
