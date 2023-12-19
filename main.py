@@ -151,74 +151,47 @@ def remove_unwanted_proxies(file_name):
     with open(file_name, 'w') as f:
         f.writelines(proxies)
 
-if not os.path.exists('proxies'):
-    os.makedirs('proxies')
-if not os.path.exists('proxies/sorted'):
-    os.makedirs('proxies/sorted')
+def process_proxies():
+    proxy_types = ['socks4', 'socks5', 'http', 'https']
+    proxy_files = {ptype: f'proxies/{ptype}.txt' for ptype in proxy_types}
 
-remove_exists('proxies/socks4')
-remove_exists('proxies/socks5')
-remove_exists('proxies/http')
-remove_exists('proxies/https')
+    if not os.path.exists('proxies'):
+        os.makedirs('proxies')
+    if not os.path.exists('proxies/sorted'):
+        os.makedirs('proxies/sorted')
 
-scrape_proxies('socks4')
-scrape_proxies('socks5')
-scrape_proxies('http')
-scrape_proxies('https')
+    for ptype in proxy_types:
+        remove_exists(proxy_files[ptype])
 
-clean_proxy_format("proxies/socks4.txt")
-clean_proxy_format("proxies/socks5.txt")
-clean_proxy_format("proxies/http.txt")
-clean_proxy_format("proxies/https.txt")
+    for ptype in proxy_types:
+        scrape_proxies(ptype)
 
-remove_empty_lines('proxies/socks4.txt')
-remove_empty_lines('proxies/socks5.txt')
-remove_empty_lines('proxies/http.txt')
-remove_empty_lines('proxies/https.txt')
+    for file_name in proxy_files.values():
+        clean_proxy_format(file_name)
+        remove_empty_lines(file_name)
+        remove_duplicates(file_name)
+        remove_unwanted_proxies(file_name)
+        randomize_proxies(file_name)
+        validate_ips(file_name)
+        remove_long_lines(file_name, 21)
 
-remove_duplicates('proxies/socks4.txt')
-remove_duplicates('proxies/socks5.txt')
-remove_duplicates('proxies/http.txt')
-remove_duplicates('proxies/https.txt')
+    combine_proxy_files('proxies/all.txt', *proxy_files.values())
 
-remove_unwanted_proxies('proxies/socks4.txt')
-remove_unwanted_proxies('proxies/socks5.txt')
-remove_unwanted_proxies('proxies/http.txt')
-remove_unwanted_proxies('proxies/https.txt')
-remove_unwanted_proxies('proxies/all.txt')
+    remove_duplicates('proxies/all.txt')
+    remove_empty_lines('proxies/all.txt')
+    randomize_proxies('proxies/all.txt')
 
-randomize_proxies('proxies/socks4.txt')
-randomize_proxies('proxies/socks5.txt')
-randomize_proxies('proxies/http.txt')
-randomize_proxies('proxies/https.txt')
+    ips_without_ports = extract_ips_without_ports('proxies/all.txt')
+    with open('proxies/all_no_ports.txt', 'w') as f:
+        f.write('\n'.join(ips_without_ports))
 
-validate_ips('proxies/socks4.txt')
-remove_long_lines('proxies/socks4.txt', 21)
-validate_ips('proxies/socks5.txt')
-remove_long_lines('proxies/socks5.txt', 21)
-validate_ips('proxies/http.txt')
-remove_long_lines('proxies/http.txt', 21)
-validate_ips('proxies/https.txt')
-remove_long_lines('proxies/https.txt', 21)
+    remove_duplicates('proxies/all_no_ports.txt')
+    validate_ips('proxies/all.txt')
+    remove_long_lines('proxies/all.txt', 21)
 
-combine_proxy_files('proxies/all.txt', 'proxies/socks4.txt', 'proxies/socks5.txt', 'proxies/http.txt',
-                    'proxies/https.txt')
+    for file_name in proxy_files.values():
+        duplicate_and_sort_proxies(file_name)
+    duplicate_and_sort_proxies('proxies/all.txt')
+    duplicate_and_sort_proxies('proxies/all_no_ports.txt')
 
-remove_duplicates('proxies/all.txt')
-remove_empty_lines('proxies/all.txt')
-randomize_proxies('proxies/all.txt')
-
-ips_without_ports = extract_ips_without_ports('proxies/all.txt')
-
-with open('proxies/all_no_ports.txt', 'w') as f:
-    f.write('\n'.join(ips_without_ports))
-
-remove_duplicates('proxies/all_no_ports.txt')
-validate_ips('proxies/all.txt')
-remove_long_lines('proxies/all.txt', 21)
-
-duplicate_and_sort_proxies('proxies/socks4.txt')
-duplicate_and_sort_proxies('proxies/socks5.txt')
-duplicate_and_sort_proxies('proxies/http.txt')
-duplicate_and_sort_proxies('proxies/https.txt')
-duplicate_and_sort_proxies('proxies/all.txt')
+process_proxies()
