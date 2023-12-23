@@ -59,6 +59,7 @@ def scrape_proxies(type):
             valid_proxies = [proxy for proxy in proxies if len(proxy) <= 21]
             with open(f"proxies/{type}.txt", "a") as f:
                 f.write("\n" + '\n'.join(valid_proxies))
+            print(f'Successfully scraped {len(valid_proxies)} proxies from {site}')
             success = True
         except requests.exceptions.RequestException as e:
             print(f'Error scraping proxies from {site}: {e}')
