@@ -50,10 +50,14 @@ def remove_exists(file_name):
         os.remove(f'proxies/{file_name}.txt')
     if os.path.exists(f'proxies/sorted/{file_name}.txt'):
         os.remove(f'proxies/sorted/{file_name}.txt')
-    os.remove('proxies/all.txt')
-    os.remove('proxies/sorted/all.txt')
-    os.remove('proxies/all_no_ports.txt')
-    os.remove('proxies/sorted/all_no_ports.txt')
+    if os.path.exists('proxies/all.txt'):
+        os.remove('proxies/all.txt')
+    if os.path.exists('proxies/sorted/all.txt'):
+        os.remove('proxies/sorted/all.txt')
+    if os.path.exists('proxies/all_no_ports.txt'):
+        os.remove('proxies/all_no_ports.txt')
+    if os.path.exists('proxies/sorted/all_no_ports.txt'):
+        os.remove('proxies/sorted/all_no_ports.txt')
 
 
 def scrape_proxies(type):
