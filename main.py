@@ -46,8 +46,14 @@ def remove_empty_lines(file_name):
 
 
 def remove_exists(file_name):
-    if os.path.exists(f'{file_name}.txt'):
-        os.remove(f'{file_name}.txt')
+    if os.path.exists(f'proxies/{file_name}.txt'):
+        os.remove(f'proxies/{file_name}.txt')
+    if os.path.exists(f'proxies/sorted/{file_name}.txt'):
+        os.remove(f'proxies/sorted/{file_name}.txt')
+    os.remove('proxies/all.txt')
+    os.remove('proxies/sorted/all.txt')
+    os.remove('proxies/all_no_ports.txt')
+    os.remove('proxies/sorted/all_no_ports.txt')
 
 
 def scrape_proxies(type):
@@ -162,7 +168,7 @@ def process_proxies():
         os.makedirs('proxies/sorted')
 
     for ptype in proxy_types:
-        remove_exists(proxy_files[ptype])
+        remove_exists(ptype)
 
     for ptype in proxy_types:
         scrape_proxies(ptype)
