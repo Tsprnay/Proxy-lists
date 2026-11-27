@@ -1,4 +1,7 @@
 {
+    "all": [
+        "https://rcloak.com/api/proxies/raw?protocol=all"
+    ],
     "socks4": [
         "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt",
         "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt",
